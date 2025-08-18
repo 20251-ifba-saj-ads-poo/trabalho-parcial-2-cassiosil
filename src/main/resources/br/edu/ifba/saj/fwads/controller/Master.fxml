@@ -21,7 +21,7 @@
                   <Image url="@assets/LogoH.png" />
                </image>
             </ImageView>
-            <Label fx:id="userEmail" layoutX="758.0" layoutY="32.0" onMouseClicked="#logOff" text="email@email" textFill="#8282ff" AnchorPane.rightAnchor="15.0">
+            <Label fx:id="userNumeroDeSerie" layoutX="758.0" layoutY="32.0" onMouseClicked="#logOff" text="NumeroDeSerie" textFill="#8282ff" AnchorPane.rightAnchor="15.0">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -49,7 +49,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showAutores" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Autores" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showEquipamentos" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Cadastro Equipamentos" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>
@@ -79,7 +79,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUsuarios" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Autores" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUsuarios" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Equipamentos" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>

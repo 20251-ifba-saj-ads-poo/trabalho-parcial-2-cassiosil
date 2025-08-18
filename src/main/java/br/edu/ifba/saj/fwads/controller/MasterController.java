@@ -24,7 +24,7 @@ public class MasterController {
     private VBox menu;
 
     @FXML
-    private Label userEmail;
+    private Label userNumeroDeSerie;
 
     @FXML
     private Circle userPicture;
