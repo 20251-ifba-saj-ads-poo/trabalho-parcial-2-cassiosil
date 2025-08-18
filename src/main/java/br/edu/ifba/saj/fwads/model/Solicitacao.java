@@ -8,13 +8,11 @@ public class Solicitacao extends AbstractModel<String> {
     private StatusSolicitacao status;
 
     public Solicitacao(String id, Equipamento equipamento, Funcionario funcionario, 
-    Date dataDevolucao, StatusSolicitacao status) {
-        super();
-        this.setId(id);
+    Date dataDevolucao) {
         this.equipamento = equipamento;
         this.funcionario = funcionario;
         this.dataDevolucao = dataDevolucao;
-        this.status = status;
+        this.status = status.EMANDAMENTO;
     }
 
     public Equipamento getEquipamento() {

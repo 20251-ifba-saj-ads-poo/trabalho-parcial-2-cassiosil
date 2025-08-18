@@ -8,8 +8,6 @@ public class Funcionario extends AbstractModel<String>{
 
     public Funcionario(String id,String nome, String cpf, String matricula, String senha,
      Permissao permissao) {
-        super();
-        this.setId(id);
         this.nome = nome;
         this.cpf = cpf;
         this.matricula = matricula;

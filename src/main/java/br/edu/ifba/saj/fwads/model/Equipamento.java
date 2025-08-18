@@ -5,14 +5,11 @@ public class Equipamento extends AbstractModel<String> {
     private String localizacao;
     private Status status;
 
-    public Equipamento(String id, String nome, String numeroDeSerie, String localizacao,
-     Status status) {
-        super();
-        this.setId(id);
+    public Equipamento(String nome, String numeroDeSerie, String localizacao) {
         this.nome = nome;
         this.numeroDeSerie = numeroDeSerie;
         this.localizacao = localizacao;
-        this.status = status;
+        this.status = status.DISPONIVEL;
     }
 
     public String getNome() {
