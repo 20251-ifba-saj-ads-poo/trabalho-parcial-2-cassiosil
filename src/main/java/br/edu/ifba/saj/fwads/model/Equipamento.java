@@ -1,11 +1,14 @@
 package br.edu.ifba.saj.fwads.model;
-public class Equipamento {
+public class Equipamento extends AbstractModel<String> {
     private String nome;
     private String numeroDeSerie;
     private String localizacao;
     private Status status;
 
-    public Equipamento(String nome, String numeroDeSerie, String localizacao, Status status) {
+    public Equipamento(String id, String nome, String numeroDeSerie, String localizacao,
+     Status status) {
+        super();
+        this.setId(id);
         this.nome = nome;
         this.numeroDeSerie = numeroDeSerie;
         this.localizacao = localizacao;
@@ -15,7 +18,6 @@ public class Equipamento {
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -23,7 +25,6 @@ public class Equipamento {
     public String getNumeroDeSerie() {
         return numeroDeSerie;
     }
-
     public void setNumeroDeSerie(String numeroDeSerie) {
         this.numeroDeSerie = numeroDeSerie;
     }
@@ -31,7 +32,6 @@ public class Equipamento {
     public String getLocalizacao() {
         return localizacao;
     }
-
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
     }
@@ -39,7 +39,6 @@ public class Equipamento {
     public Status getStatus() {
         return status;
     }
-
     public void alterarStatus(Status novoStatus) {
         this.status = novoStatus;
     }

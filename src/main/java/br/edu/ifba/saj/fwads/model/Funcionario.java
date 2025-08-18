@@ -1,12 +1,15 @@
 package br.edu.ifba.saj.fwads.model;
-public class Funcionario {
+public class Funcionario extends AbstractModel<String>{
     private String nome;
-    private int cpf;
+    private String cpf;
     private String matricula;
     private String senha;
     private Permissao permissao;
 
-    public Funcionario(String nome, int cpf, String matricula, String senha, Permissao permissao) {
+    public Funcionario(String id,String nome, String cpf, String matricula, String senha,
+     Permissao permissao) {
+        super();
+        this.setId(id);
         this.nome = nome;
         this.cpf = cpf;
         this.matricula = matricula;
@@ -17,23 +20,20 @@ public class Funcionario {
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public int getCpf() {
+    public String getCpf() {
         return cpf;
     }
-
-    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
 
     public String getMatricula() {
         return matricula;
     }
-
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
@@ -41,7 +41,6 @@ public class Funcionario {
     public String getSenha() {
         return senha;
     }
-
     public void setSenha(String senha) {
         this.senha = senha;
     }
@@ -49,7 +48,6 @@ public class Funcionario {
     public Permissao getPermissao() {
         return permissao;
     }
-
     public void setPermissao(Permissao permissao) {
         this.permissao = permissao;
     }
