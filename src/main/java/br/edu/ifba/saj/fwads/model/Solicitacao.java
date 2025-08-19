@@ -7,7 +7,7 @@ public class Solicitacao extends AbstractModel<String> {
     private Date dataDevolucao;
     private StatusSolicitacao status;
 
-    public Solicitacao(String id, Equipamento equipamento, Funcionario funcionario, 
+    public Solicitacao(Equipamento equipamento, Funcionario funcionario, 
     Date dataDevolucao) {
         this.equipamento = equipamento;
         this.funcionario = funcionario;

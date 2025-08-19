@@ -79,6 +79,12 @@ public class MasterController {
         showFXMLFile("CadFuncionario.fxml");
     }
 
+     @FXML
+    void showSolicitacoes(ActionEvent event) {
+        limparBotoes(event.getSource());
+        showFXMLFile("CadSolicitacao.fxml");
+    }
+
     private void showFXMLFile(String resourceName) {
         try {            
             Pane fxmlCarregado = FXMLLoader.load(getClass().getResource(resourceName));
