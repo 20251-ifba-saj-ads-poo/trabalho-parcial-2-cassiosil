@@ -6,13 +6,12 @@ public class Funcionario extends AbstractModel<String>{
     private String senha;
     private Permissao permissao;
 
-    public Funcionario(String id,String nome, String cpf, String matricula, String senha,
-     Permissao permissao) {
+    public Funcionario(String nome, String cpf, String matricula, String senha) {
         this.nome = nome;
         this.cpf = cpf;
         this.matricula = matricula;
         this.senha = senha;
-        this.permissao = permissao;
+        this.permissao = permissao.USUARIO;
     }
 
     public String getNome() {

@@ -10,7 +10,7 @@ import javafx.scene.control.TextField;
 public class CadEquipamentoController {
 
     @FXML
-    private TextField txNome;
+    private TextField txnome;
 
     @FXML
     private TextField txnumeroDeSerie;
@@ -21,7 +21,7 @@ public class CadEquipamentoController {
 
     @FXML
     private void salvarEquipamento() {
-        Equipamento novoEquipamento = new Equipamento(txNome.getText(),
+        Equipamento novoEquipamento = new Equipamento(txnome.getText(),
                     txnumeroDeSerie.getText(), 
                     txlocalizacao.getText());
         new Alert(AlertType.INFORMATION, 
@@ -31,7 +31,7 @@ public class CadEquipamentoController {
     }
     @FXML
     private void limparTela() {
-        txNome.setText("");
+        txnome.setText("");
         txnumeroDeSerie.setText("");
         txlocalizacao.setText("");
     }
