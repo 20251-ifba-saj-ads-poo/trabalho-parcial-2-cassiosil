@@ -1,13 +1,17 @@
 
 package br.edu.ifba.saj.fwads.controller;
 
+import br.edu.ifba.saj.fwads.App;
 import br.edu.ifba.saj.fwads.Dados;
 import br.edu.ifba.saj.fwads.model.Equipamento;
 import br.edu.ifba.saj.fwads.model.Status;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 public class ListarEquipamentoController {
     @FXML
@@ -22,24 +26,24 @@ public class ListarEquipamentoController {
     @FXML
     private TableColumn<Equipamento, Status> columnStatus;
 
-
     @FXML
     public void initialize() {
         columnNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
-        columnNumeroDeSerie.setCellValueFactory(new PropertyValueFactory<>("numero de serie"));
-        columnLocalizacao.setCellValueFactory(new PropertyValueFactory<>("localização"));
-        columnStatus.setCellValueFactory(new PropertyValueFactory<>("localização"));
+        columnNumeroDeSerie.setCellValueFactory(new PropertyValueFactory<>("numeroDeSerie"));
+        columnLocalizacao.setCellValueFactory(new PropertyValueFactory<>("localizacao"));
+        columnStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
         tblEquipamento.setItems(Dados.listaEquipamentos);
     }
 
-    /*@FXML
+    @FXML
     public void showNovoEquipamento() {
-        
-        Stage stage = new Stage();            
-        Scene scene = new Scene(App.loadFXML("CadEquipamentor.fxml"), 800, 600);            
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(App.loadFXML("controller/CadEquipamento.fxml"), 800, 600);
         stage.setScene(scene);
-        stage.initModality(Modality.APPLICATION_MODAL); 
-        stage.showAndWait();            
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait();
+
     }
-*/
+
 }
