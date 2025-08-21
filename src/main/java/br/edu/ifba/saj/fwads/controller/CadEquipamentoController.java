@@ -26,7 +26,7 @@ public class CadEquipamentoController {
                     txlocalizacao.getText());
         new Alert(AlertType.INFORMATION, 
         "Cadastrando Equipamento:"+novoEquipamento.getNome()).showAndWait();
-        Inventario.listaDeEquipamentos.add(novoEquipamento);
+        Inventario.listaEquipamentos.add(novoEquipamento);
         txnome.setText("");
         txnumeroDeSerie.setText("");
         txlocalizacao.setText("");;
