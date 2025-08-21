@@ -1,5 +1,8 @@
 package br.edu.ifba.saj.fwads.model;
-public class Equipamento extends AbstractModel<String> {
+
+import java.util.UUID;
+
+public class Equipamento extends AbstractModel<UUID> {
     private String nome;
     private String numeroDeSerie;
     private String localizacao;

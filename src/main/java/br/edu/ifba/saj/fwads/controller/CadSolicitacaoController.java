@@ -1,8 +1,6 @@
 package br.edu.ifba.saj.fwads.controller;
 
-import br.edu.ifba.saj.fwads.Inventario;
-import br.edu.ifba.saj.fwads.Solicitacoes;
-import br.edu.ifba.saj.fwads.Equipes;
+import br.edu.ifba.saj.fwads.Dados;
 import br.edu.ifba.saj.fwads.model.Equipamento;
 import br.edu.ifba.saj.fwads.model.Funcionario;
 import br.edu.ifba.saj.fwads.model.Solicitacao;
@@ -11,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.Pane;
@@ -25,17 +24,20 @@ public class CadSolicitacaoController {
     private ChoiceBox<Funcionario> slFuncionario;
 
     @FXML
-    private TextField txdataDeDevolucao;
+    private DatePicker dtSolicitacao;
+    @FXML
+
+    private DatePicker dtDevolucao;
 
 
     @FXML
     private void salvarSolicitacao() {
         Solicitacao novoSolicitacao = new Solicitacao(slEquipamento.getSelectionModel().getSelectedItem(),
                     slFuncionario.getSelectionModel().getSelectedItem(), 
-                    txdataDeDevolucao.getText());
+                    dtSolicitacao.getValue(), dtDevolucao.getValue());
         new Alert(AlertType.INFORMATION, 
         "Cadastrando Solicitacao:"+novoSolicitacao.toString()).showAndWait();
-        Solicitacoes.listaSolicitacoes.add(novoSolicitacao);
+        Dados.listaSolicitacoes.add(novoSolicitacao);
         limparTela();
     }
 
@@ -52,9 +54,9 @@ public class CadSolicitacaoController {
 
             @Override
             public Equipamento fromString(String stringAutor) {
-                return Inventario.listaEquipamentos
+                return Dados.listaEquipamentos
                     .stream()
-                    .filter(autor -> stringAutor.equals(autor.getNome() + ":" + autor.getNumeroDeSerie()))
+                    .filter(equipamento -> stringAutor.equals(equipamento.getNome() + ":" + equipamento.getNumeroDeSerie()))
                     .findAny()
                     .orElse(null);                
             }
@@ -74,7 +76,7 @@ public class CadSolicitacaoController {
 
             @Override
             public Funcionario fromString(String stringFuncionario) {
-                return Equipes.listaFuncionarios
+                return Dados.listaFuncionarios
                     .stream()
                     .filter(autor -> stringFuncionario.equals(autor.getNome() + ":" + autor.getMatricula()))
                     .findAny()
@@ -85,11 +87,20 @@ public class CadSolicitacaoController {
         carregarlistaFuncionarios();
     }
 
+    private void carregarlistaFuncionarios() {
+        slFuncionario.setItems(Dados.listaFuncionarios);
+    }
+
+    private void carregarlistaEquipamentos() {
+        slEquipamento.setItems(Dados.listaEquipamentos);
+    }
+
     @FXML
     private void limparTela() {
-        slEquipamento.setText("");
-        slFuncionario.setText("");
-        txdataDeDevolucao.setText("");
+        slEquipamento.setSelectionModel(null);
+        slFuncionario.setSelectionModel(null);
+        dtSolicitacao.setValue(null);
+        dtDevolucao.setValue(null);
     }
 
 }

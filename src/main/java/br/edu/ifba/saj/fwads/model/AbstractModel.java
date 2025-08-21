@@ -8,12 +8,6 @@ public abstract class AbstractModel<T> {
     private LocalDateTime updatedAt;
     private String createdBy;
     private String updatedBy;
-
-    public AbstractModel() {
-        this.createdAt = LocalDateTime.now();
-        this.updatedAt = LocalDateTime.now();
-    }
-
     
     public T getId() {
         return id;

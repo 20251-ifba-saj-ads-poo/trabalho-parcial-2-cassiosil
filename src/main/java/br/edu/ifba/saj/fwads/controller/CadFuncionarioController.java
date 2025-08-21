@@ -1,6 +1,6 @@
 package br.edu.ifba.saj.fwads.controller;
 
-import br.edu.ifba.saj.fwads.Equipes;
+import br.edu.ifba.saj.fwads.Dados;
 import br.edu.ifba.saj.fwads.model.Funcionario;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -30,7 +30,7 @@ public class CadFuncionarioController {
                     txsenha.getText());
         new Alert(AlertType.INFORMATION, 
         "Cadastrando Funcionario:"+novoFuncionario.getNome()).showAndWait();
-        Equipes.listaFuncionarios.add(novoFuncionario);
+        Dados.listaFuncionarios.add(novoFuncionario);
         limparTela();
     }
     @FXML

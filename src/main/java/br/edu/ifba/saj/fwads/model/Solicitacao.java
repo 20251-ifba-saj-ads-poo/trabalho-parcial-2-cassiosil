@@ -1,45 +1,52 @@
 package br.edu.ifba.saj.fwads.model;
-import java.util.Date;
+
+import java.time.LocalDate;
 
 public class Solicitacao extends AbstractModel<String> {
     private Equipamento equipamento;
     private Funcionario funcionario;
-    private Date dataDevolucao;
+    private LocalDate dataSolicitacao;
+    private LocalDate dataDevolucao;
     private StatusSolicitacao status;
-
-    public Solicitacao(Equipamento equipamento, Funcionario funcionario, 
-    Date dataDevolucao) {
+    public Solicitacao(Equipamento equipamento, Funcionario funcionario, LocalDate dataSolicitacao, LocalDate dataDevolucao) {
         this.equipamento = equipamento;
         this.funcionario = funcionario;
+        this.dataSolicitacao = dataSolicitacao;
         this.dataDevolucao = dataDevolucao;
-        this.status = status.EMANDAMENTO;
+        this.status = StatusSolicitacao.EMANDAMENTO;
     }
-
     public Equipamento getEquipamento() {
         return equipamento;
     }
     public void setEquipamento(Equipamento equipamento) {
         this.equipamento = equipamento;
     }
-
     public Funcionario getFuncionario() {
         return funcionario;
     }
     public void setFuncionario(Funcionario funcionario) {
         this.funcionario = funcionario;
     }
-
-    public Date getDataDevolucao() {
+    public LocalDate getDataSolicitacao() {
+        return dataSolicitacao;
+    }
+    public void setDataSolicitacao(LocalDate dataSolicitacao) {
+        this.dataSolicitacao = dataSolicitacao;
+    }
+    public LocalDate getDataDevolucao() {
         return dataDevolucao;
     }
-    public void setDataDevolucao(Date dataDevolucao) {
+    public void setDataDevolucao(LocalDate dataDevolucao) {
         this.dataDevolucao = dataDevolucao;
     }
-
     public StatusSolicitacao getStatus() {
         return status;
     }
-    public void alterarStatus(StatusSolicitacao novoStatus) {
-        this.status = novoStatus;
+    public void setStatus(StatusSolicitacao status) {
+        this.status = status;
     }
+
+    
+
+    
 }

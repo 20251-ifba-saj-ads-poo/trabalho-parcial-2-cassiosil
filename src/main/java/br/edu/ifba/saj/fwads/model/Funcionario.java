@@ -1,5 +1,8 @@
 package br.edu.ifba.saj.fwads.model;
-public class Funcionario extends AbstractModel<String>{
+
+import java.util.UUID;
+
+public class Funcionario extends AbstractModel<UUID>{
     private String nome;
     private String cpf;
     private String matricula;
