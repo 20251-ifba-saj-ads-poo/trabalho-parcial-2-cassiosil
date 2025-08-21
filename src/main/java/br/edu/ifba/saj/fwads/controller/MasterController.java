@@ -86,7 +86,7 @@ public class MasterController {
     }
 
     @FXML
-    void showListaEquipamento(ActionEvent event) {
+    void showListarEquipamento(ActionEvent event) {
         limparBotoes(event.getSource());
         showFXMLFile("ListarEquipemento.fxml");
     }

@@ -6,7 +6,7 @@
 
 <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="238.0" prefWidth="178.0" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifba.saj.fwads.controller.ListarEquipamentoController">
    <children>
-      <ListView fx:id="listaDeEquipamentos" prefHeight="195.0" prefWidth="178.0" />
-      <Button layoutX="57.0" layoutY="205.0" mnemonicParsing="false" onAction="#removerEquipamento" onMouseClicked="#removerEquipamento" text="Remover" />
+      <Button layoutX="57.0" layoutY="205.0" mnemonicParsing="false" onMouseClicked="#removerEquipamento" text="Remover" />
+      <ListView fx:id="listaDeEquipamentos" layoutX="23.0" layoutY="21.0" prefHeight="162.0" prefWidth="130.0" />
    </children>
 </AnchorPane>

@@ -1,4 +1,5 @@
 package br.edu.ifba.saj.fwads.controller;
+
 import br.edu.ifba.saj.fwads.Inventario;
 import br.edu.ifba.saj.fwads.model.Equipamento;
 import javafx.fxml.FXML;
@@ -14,6 +15,7 @@ public class ListarEquipamentoController {
     public void initialize() {
         listaDeEquipamentos.setItems(Inventario.listaEquipamentos);
     }
+   
     @FXML
     void removerEquipamento(MouseEvent event) {
         int selectedID = listaDeEquipamentos.getSelectionModel().getSelectedIndex();

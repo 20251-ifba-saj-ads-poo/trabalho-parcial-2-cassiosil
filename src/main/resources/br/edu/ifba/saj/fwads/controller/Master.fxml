@@ -94,7 +94,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showListaEquipamento" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Equipamentos" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showListarEquipamento" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Equipamentos" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>
