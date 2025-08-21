@@ -1,6 +1,6 @@
 package br.edu.ifba.saj.fwads.controller;
 
-import br.edu.ifba.saj.fwads.Biblioteca;
+import br.edu.ifba.saj.fwads.Inventario;
 import br.edu.ifba.saj.fwads.model.Equipamento;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
@@ -26,8 +26,10 @@ public class CadEquipamentoController {
                     txlocalizacao.getText());
         new Alert(AlertType.INFORMATION, 
         "Cadastrando Equipamento:"+novoEquipamento.getNome()).showAndWait();
-        Biblioteca.listaEquipamentos.add(novoEquipamento);
-        limparTela();
+        Inventario.listaDeEquipamentos.add(novoEquipamento);
+        txnome.setText("");
+        txnumeroDeSerie.setText("");
+        txlocalizacao.setText("");;
     }
     @FXML
     private void limparTela() {

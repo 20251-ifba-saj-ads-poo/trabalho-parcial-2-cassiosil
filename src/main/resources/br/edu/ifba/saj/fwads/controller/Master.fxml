@@ -74,7 +74,7 @@
                <graphic>
                   <ImageView fitHeight="35.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/study.png" />
+                        <Image url="@assets/reading-book.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -94,7 +94,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showUsuarios" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Funcionarios" textFill="WHITE">
+            <Button alignment="TOP_LEFT" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showListaEquipamento" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Equipamentos" textFill="WHITE">
                <padding>
                   <Insets bottom="5.0" left="10.0" />
                </padding>

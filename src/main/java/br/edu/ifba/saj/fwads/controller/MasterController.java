@@ -79,10 +79,16 @@ public class MasterController {
         showFXMLFile("CadFuncionario.fxml");
     }
 
-     @FXML
+    @FXML
     void showSolicitacoes(ActionEvent event) {
         limparBotoes(event.getSource());
         showFXMLFile("CadSolicitacao.fxml");
+    }
+
+    @FXML
+    void showListaEquipamento(ActionEvent event) {
+        limparBotoes(event.getSource());
+        showFXMLFile("ListarEquipemento.fxml");
     }
 
     private void showFXMLFile(String resourceName) {
