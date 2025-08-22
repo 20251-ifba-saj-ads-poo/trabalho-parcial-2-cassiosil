@@ -45,13 +45,7 @@ public class Solicitacao extends AbstractModel<String> {
     public void setStatus(StatusSolicitacao status) {
         this.status = status;
     }
-
-    @Override
-    public String toString() {
-        return equipamento.getNumeroDeSerie()+" : "
-        + funcionario.getMatricula();
-    }
-    
+ 
     
 
     
