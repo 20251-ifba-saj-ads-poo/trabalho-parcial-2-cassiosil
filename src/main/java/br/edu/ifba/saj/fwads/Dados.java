@@ -7,11 +7,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class Dados {
-    public static ObservableList<Funcionario> listaFuncionarios = FXCollections.observableArrayList();
     public static ObservableList<Equipamento> listaEquipamentos = FXCollections.observableArrayList();
+    public static ObservableList<Funcionario> listaFuncionarios = FXCollections.observableArrayList();
     public static ObservableList<Solicitacao> listaSolicitacoes = FXCollections.observableArrayList();
     static{
-        //listaAutores.add(new Autor("Jose","jose@seila.com","123.456.789.-11"));
+        listaEquipamentos.add(new Equipamento("E","E","E"));
+        listaFuncionarios.add(new Funcionario("F","F","F","F"));
     }
     
 }

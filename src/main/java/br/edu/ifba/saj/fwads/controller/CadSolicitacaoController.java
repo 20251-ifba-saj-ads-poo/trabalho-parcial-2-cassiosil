@@ -4,15 +4,11 @@ import br.edu.ifba.saj.fwads.Dados;
 import br.edu.ifba.saj.fwads.model.Equipamento;
 import br.edu.ifba.saj.fwads.model.Funcionario;
 import br.edu.ifba.saj.fwads.model.Solicitacao;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.TextField;
-import javafx.scene.control.Alert.AlertType;
-import javafx.scene.layout.Pane;
 import javafx.util.StringConverter;
 
 public class CadSolicitacaoController {
@@ -34,7 +30,8 @@ public class CadSolicitacaoController {
     private void salvarSolicitacao() {
         Solicitacao novoSolicitacao = new Solicitacao(slEquipamento.getSelectionModel().getSelectedItem(),
                     slFuncionario.getSelectionModel().getSelectedItem(), 
-                    dtSolicitacao.getValue(), dtDevolucao.getValue());
+                    dtSolicitacao.getValue(), 
+                    dtDevolucao.getValue());
         new Alert(AlertType.INFORMATION, 
         "Cadastrando Solicitacao:"+novoSolicitacao.toString()).showAndWait();
         Dados.listaSolicitacoes.add(novoSolicitacao);
@@ -47,16 +44,16 @@ public class CadSolicitacaoController {
             @Override
             public String toString(Equipamento obj) {
                 if (obj != null) {
-                    return obj.getNome() + ":" + obj.getNumeroDeSerie();
+                    return obj.getNome() + " : " + obj.getNumeroDeSerie();
                 }
                 return "";
             }
 
             @Override
-            public Equipamento fromString(String stringAutor) {
+            public Equipamento fromString(String stringEquipamento) {
                 return Dados.listaEquipamentos
                     .stream()
-                    .filter(equipamento -> stringAutor.equals(equipamento.getNome() + ":" + equipamento.getNumeroDeSerie()))
+                    .filter(equipamento -> stringEquipamento.equals(equipamento.getNome() + " : " + equipamento.getNumeroDeSerie()))
                     .findAny()
                     .orElse(null);                
             }
@@ -78,7 +75,7 @@ public class CadSolicitacaoController {
             public Funcionario fromString(String stringFuncionario) {
                 return Dados.listaFuncionarios
                     .stream()
-                    .filter(autor -> stringFuncionario.equals(autor.getNome() + ":" + autor.getMatricula()))
+                    .filter(funcionario -> stringFuncionario.equals(funcionario.getNome() + ":" + funcionario.getMatricula()))
                     .findAny()
                     .orElse(null);                
             }

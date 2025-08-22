@@ -10,24 +10,24 @@ import javafx.scene.control.TextField;
 public class CadFuncionarioController {
 
     @FXML
-    private TextField txnome;
+    private TextField txNome;
 
     @FXML
-    private TextField txcpf;
+    private TextField txCPF;
 
     @FXML
-    private TextField txmatricula;
+    private TextField txMatricula;
 
     @FXML
-    private TextField txsenha;
+    private TextField txSenha;
 
 
     @FXML
     private void salvarFuncionario() {
-        Funcionario novoFuncionario = new Funcionario(txnome.getText(),
-                    txcpf.getText(), 
-                    txmatricula.getText(),
-                    txsenha.getText());
+        Funcionario novoFuncionario = new Funcionario(txNome.getText(),
+                    txCPF.getText(), 
+                    txMatricula.getText(),
+                    txSenha.getText());
         new Alert(AlertType.INFORMATION, 
         "Cadastrando Funcionario:"+novoFuncionario.getNome()).showAndWait();
         Dados.listaFuncionarios.add(novoFuncionario);
@@ -35,10 +35,10 @@ public class CadFuncionarioController {
     }
     @FXML
     private void limparTela() {
-        txnome.setText("");
-        txcpf.setText("");
-        txmatricula.setText("");
-        txsenha.setText("");
+        txNome.setText("");
+        txCPF.setText("");
+        txMatricula.setText("");
+        txSenha.setText("");
     }
 
 }

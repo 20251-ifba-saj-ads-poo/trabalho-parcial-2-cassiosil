@@ -124,6 +124,22 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Button alignment="TOP_LEFT" layoutX="10.0" layoutY="214.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showListarSolicitacao" prefHeight="35.0" styleClass="btn-menu" stylesheets="@assets/style.css" text="Listar Solicitacões" textFill="WHITE">
+               <padding>
+                  <Insets bottom="5.0" left="10.0" />
+               </padding>
+               <font>
+                  <Font size="25.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/study.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            
          </children></VBox>
    </left>
 </BorderPane>

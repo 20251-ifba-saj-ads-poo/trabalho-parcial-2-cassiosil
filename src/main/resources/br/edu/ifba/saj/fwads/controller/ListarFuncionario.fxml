@@ -9,7 +9,7 @@
 
 <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/24" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifba.saj.fwads.controller.ListarFuncionarioController">
    <center>
-      <TableView fx:id="tblEquipamento" prefHeight="347.0" prefWidth="489.0">
+      <TableView fx:id="tblFuncionario" prefHeight="347.0" prefWidth="489.0">
         <columns>
           <TableColumn fx:id="columnNome" editable="false" minWidth="-1.0" prefWidth="201.0" text="Nome" />
           <TableColumn fx:id="columnCPF" editable="false" minWidth="-1.0" prefWidth="173.0" text="CPF" />
