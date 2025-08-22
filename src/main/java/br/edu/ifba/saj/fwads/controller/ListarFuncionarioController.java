@@ -36,7 +36,7 @@ public class ListarFuncionarioController {
     }
 
     @FXML
-    public void showNovoEquipamento() {
+    public void showNovoFuncionario() {
 
         Stage stage = new Stage();
         Scene scene = new Scene(App.loadFXML("controller/CadFuncionario.fxml"), 800, 600);
