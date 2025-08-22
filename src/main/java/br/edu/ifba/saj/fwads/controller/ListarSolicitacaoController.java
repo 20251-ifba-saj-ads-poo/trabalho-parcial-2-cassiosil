@@ -40,6 +40,7 @@ public class ListarSolicitacaoController {
         columnDataDevolucao.setCellValueFactory(new PropertyValueFactory<>("dataDevolucao"));
         columnStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
         tblSolicitacao.setItems(Dados.listaSolicitacoes);
+        
     }
 
     @FXML
