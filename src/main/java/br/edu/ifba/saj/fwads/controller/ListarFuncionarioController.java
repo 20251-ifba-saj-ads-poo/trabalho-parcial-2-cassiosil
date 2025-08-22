@@ -1,0 +1,49 @@
+
+package br.edu.ifba.saj.fwads.controller;
+
+import br.edu.ifba.saj.fwads.App;
+import br.edu.ifba.saj.fwads.Dados;
+import br.edu.ifba.saj.fwads.model.Funcionario;
+import br.edu.ifba.saj.fwads.model.Permissao;
+import javafx.fxml.FXML;
+import javafx.scene.Scene;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+public class ListarFuncionarioController {
+    @FXML
+    private TableView<Funcionario> tblFuncionario;
+
+    @FXML
+    private TableColumn<Funcionario, String> columnNome;
+    @FXML
+    private TableColumn<Funcionario, String> columnCPF;
+    @FXML
+    private TableColumn<Funcionario, String> columnMatricula;
+    @FXML
+    private TableColumn<Funcionario, Permissao> columnPermissao;
+
+    @FXML
+    public void initialize() {
+        columnNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
+        columnCPF.setCellValueFactory(new PropertyValueFactory<>("CPF"));
+        columnMatricula.setCellValueFactory(new PropertyValueFactory<>("Matricula"));
+        columnPermissao.setCellValueFactory(new PropertyValueFactory<>("permissao"));
+        tblFuncionario.setItems(Dados.listaFuncionarios);
+    }
+
+    @FXML
+    public void showNovoEquipamento() {
+
+        Stage stage = new Stage();
+        Scene scene = new Scene(App.loadFXML("controller/CadFuncionario.fxml"), 800, 600);
+        stage.setScene(scene);
+        stage.initModality(Modality.APPLICATION_MODAL);
+        stage.showAndWait();
+
+    }
+
+}
