@@ -32,8 +32,8 @@ public class ListarSolicitacaoController {
 
     @FXML
     public void initialize() {
-        columnEquipamento.setCellValueFactory(new PropertyValueFactory<>("equipamento"));
-        columnFuncionario.setCellValueFactory(new PropertyValueFactory<>("funcionario"));
+        columnEquipamento.setCellValueFactory(new PropertyValueFactory<>("numeroDeSerie"));
+        columnFuncionario.setCellValueFactory(new PropertyValueFactory<>("matricula"));
         columnDataSolicitacao.setCellValueFactory(new PropertyValueFactory<>("dataSolicitacao"));
         columnDataDevolucao.setCellValueFactory(new PropertyValueFactory<>("dataDevolucao"));
         columnStatus.setCellValueFactory(new PropertyValueFactory<>("status"));

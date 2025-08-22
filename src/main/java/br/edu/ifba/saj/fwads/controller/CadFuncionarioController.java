@@ -29,7 +29,7 @@ public class CadFuncionarioController {
                     txMatricula.getText(),
                     txSenha.getText());
         new Alert(AlertType.INFORMATION, 
-        "Cadastrando Funcionario:"+novoFuncionario.getNome()).showAndWait();
+        "Cadastrando Funcionario: "+novoFuncionario.getNome()).showAndWait();
         Dados.listaFuncionarios.add(novoFuncionario);
         limparTela();
     }

@@ -33,7 +33,7 @@ public class CadSolicitacaoController {
                     dtSolicitacao.getValue(), 
                     dtDevolucao.getValue());
         new Alert(AlertType.INFORMATION, 
-        "Cadastrando Solicitacao:"+novoSolicitacao.toString()).showAndWait();
+        "Cadastrando Solicitacao: "+novoSolicitacao.toString()).showAndWait();
         Dados.listaSolicitacoes.add(novoSolicitacao);
         limparTela();
     }
@@ -66,7 +66,7 @@ public class CadSolicitacaoController {
             @Override
             public String toString(Funcionario obj) {
                 if (obj != null) {
-                    return obj.getNome() + ":" + obj.getMatricula();
+                    return obj.getNome() + " : " + obj.getMatricula();
                 }
                 return "";
             }
