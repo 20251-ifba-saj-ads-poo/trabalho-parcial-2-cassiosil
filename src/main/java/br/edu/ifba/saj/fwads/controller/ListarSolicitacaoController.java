@@ -5,6 +5,8 @@ import java.time.LocalDate;
 
 import br.edu.ifba.saj.fwads.App;
 import br.edu.ifba.saj.fwads.Dados;
+import br.edu.ifba.saj.fwads.model.Equipamento;
+import br.edu.ifba.saj.fwads.model.Funcionario;
 import br.edu.ifba.saj.fwads.model.Solicitacao;
 import br.edu.ifba.saj.fwads.model.StatusSolicitacao;
 import javafx.fxml.FXML;
@@ -20,9 +22,9 @@ public class ListarSolicitacaoController {
     private TableView<Solicitacao> tblSolicitacao;
 
     @FXML
-    private TableColumn<Solicitacao, String> columnEquipamento;
+    private TableColumn<Solicitacao, Equipamento> columnEquipamento;
     @FXML
-    private TableColumn<Solicitacao, String> columnFuncionario;
+    private TableColumn<Solicitacao, Funcionario> columnFuncionario;
     @FXML
     private TableColumn<Solicitacao, LocalDate> columnDataSolicitacao;
     @FXML
@@ -32,8 +34,8 @@ public class ListarSolicitacaoController {
 
     @FXML
     public void initialize() {
-        columnEquipamento.setCellValueFactory(new PropertyValueFactory<>("numeroDeSerie"));
-        columnFuncionario.setCellValueFactory(new PropertyValueFactory<>("matricula"));
+        columnEquipamento.setCellValueFactory(new PropertyValueFactory<>("equipamento"));
+        columnFuncionario.setCellValueFactory(new PropertyValueFactory<>("funcionario"));
         columnDataSolicitacao.setCellValueFactory(new PropertyValueFactory<>("dataSolicitacao"));
         columnDataDevolucao.setCellValueFactory(new PropertyValueFactory<>("dataDevolucao"));
         columnStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
