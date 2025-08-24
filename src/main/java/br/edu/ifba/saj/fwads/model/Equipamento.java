@@ -42,4 +42,12 @@ public class Equipamento extends AbstractModel<UUID> {
     public void alterarStatus(Status novoStatus) {
         this.status = novoStatus;
     }
+
+    @Override
+    public String toString() {
+        return "Equipamento [nome = " + nome + ", numero de serie = " +
+         numeroDeSerie + ", localizacao = " + localizacao + ", status = " + status + "]";
+    }
+
+    
 }

@@ -46,7 +46,11 @@ public class Solicitacao extends AbstractModel<String> {
         this.status = status;
     }
  
-    
+    @Override
+    public String toString() {
+        return "Solicitacao [equipamento = " + equipamento.getNumeroDeSerie() + ", funcionario = " + funcionario.getMatricula() +
+         ", dataSolicitacao = " + dataSolicitacao + ", dataDevolucao = " + dataDevolucao + "]";
+    }
 
     
 }

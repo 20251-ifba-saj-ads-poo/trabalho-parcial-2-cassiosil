@@ -51,4 +51,10 @@ public class Funcionario extends AbstractModel<UUID>{
     public void setPermissao(Permissao permissao) {
         this.permissao = permissao;
     }
+
+    @Override
+    public String toString() {
+        return "Funcionario [nome = " + nome + ", CPF = " + cpf +
+         ", matricula = " + matricula + ", permissao = " + permissao + "]";
+    }
 }
