@@ -12,7 +12,7 @@
       <TableView fx:id="tblFuncionario" prefHeight="347.0" prefWidth="489.0">
         <columns>
           <TableColumn fx:id="columnNome" editable="false" minWidth="-1.0" prefWidth="201.0" text="Nome" />
-          <TableColumn fx:id="columnCPF" editable="false" minWidth="-1.0" prefWidth="173.0" text="CPF" />
+          <TableColumn fx:id="columncpf" editable="false" minWidth="-1.0" prefWidth="173.0" text="CPF" />
             <TableColumn fx:id="columnMatricula" editable="false" minWidth="-1.0" prefWidth="225.0" text="Matricula" />
             <TableColumn fx:id="columnPermissao" editable="false" minWidth="-1.0" prefWidth="225.0" text="permissao" />
         </columns>
