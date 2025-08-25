@@ -34,12 +34,10 @@ public class CadSolicitacaoController {
                     slFuncionario.getSelectionModel().getSelectedItem(), 
                     dtSolicitacao.getValue(), 
                     dtDevolucao.getValue());
-                    Dados.listaSolicitacoes.add(novoSolicitacao);
-        
+                    
         new Alert(AlertType.INFORMATION,
         "Cadastrando Solicitacao: "+novoSolicitacao.toString()).showAndWait();
-        slEquipamento.setSelectionModel(null);
-        slFuncionario.setSelectionModel(null);
+        Dados.listaSolicitacoes.add(novoSolicitacao);
         limparTela();
     }
 
