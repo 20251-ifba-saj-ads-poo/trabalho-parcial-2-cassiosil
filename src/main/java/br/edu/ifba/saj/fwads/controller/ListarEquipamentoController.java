@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -45,5 +46,15 @@ public class ListarEquipamentoController {
         stage.showAndWait();
 
     }
+    
+    @FXML
+    public void removerEquipamento(MouseEvent event) {
+        int selectedID = tblEquipamento.getSelectionModel().getSelectedIndex();
+        if(selectedID >= 0){
+            tblEquipamento.getItems().remove(selectedID);
+        }
+        
+    }
 
 }
+

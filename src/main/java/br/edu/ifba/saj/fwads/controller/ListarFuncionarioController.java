@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -44,6 +45,15 @@ public class ListarFuncionarioController {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.showAndWait();
 
+    }
+
+    @FXML
+    public void removerFuncionario(MouseEvent event) {
+        int selectedID = tblFuncionario.getSelectionModel().getSelectedIndex();
+        if(selectedID >= 0){
+            tblFuncionario.getItems().remove(selectedID);
+        }
+        
     }
 
 }

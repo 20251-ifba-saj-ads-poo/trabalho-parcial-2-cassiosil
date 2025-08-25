@@ -12,7 +12,9 @@ public class Dados {
     public static ObservableList<Solicitacao> listaSolicitacoes = FXCollections.observableArrayList();
     static{
         listaEquipamentos.add(new Equipamento("E","E","E"));
+        listaEquipamentos.add(new Equipamento("Q","Q","Q"));
         listaFuncionarios.add(new Funcionario("F","F","F"));
+        listaFuncionarios.add(new Funcionario("U","U","U"));
     }
     
 }
